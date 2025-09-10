@@ -61,10 +61,6 @@ const Navigation = ({ variant = "app" }: NavigationProps) => {
               </>
             ) : (
               <>
-                <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-50 border border-green-200">
-                  <div className="w-2 h-2 bg-green-500 rounded-full" />
-                  <span className="text-xs font-medium text-green-700">Connected</span>
-                </div>
                 <Link to="/">
                   <Button 
                     variant="outline" 
@@ -143,12 +139,6 @@ const Navigation = ({ variant = "app" }: NavigationProps) => {
                 </>
               ) : (
                 <>
-                  <div className="px-4">
-                    <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-green-50 border border-green-200">
-                      <div className="w-2 h-2 bg-green-500 rounded-full" />
-                      <span className="text-xs font-medium text-green-700">Connected</span>
-                    </div>
-                  </div>
                   <Link 
                     to="/" 
                     className="block mx-4"
