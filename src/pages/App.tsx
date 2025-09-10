@@ -3,7 +3,7 @@ import WalletConnector from "@/components/WalletConnector";
 import PassportInterface from "@/components/PassportInterface";
 import Navigation from "@/components/Navigation";
 
-const Index = () => {
+const App = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navigation variant="app" />
@@ -31,4 +31,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default App;

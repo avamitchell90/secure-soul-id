@@ -5,13 +5,14 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { WagmiProvider } from 'wagmi';
 import { config } from './lib/wagmi';
-import Index from "./pages/Index";
+import Home from "./pages/Home";
+import App from "./pages/App";
 import Promotion from "./pages/Promotion";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const App = () => (
+const AppComponent = () => (
   <WagmiProvider config={config}>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
@@ -19,7 +20,8 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Index />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/app" element={<App />} />
             <Route path="/promotion" element={<Promotion />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
@@ -30,4 +32,4 @@ const App = () => (
   </WagmiProvider>
 );
 
-export default App;
+export default AppComponent;
