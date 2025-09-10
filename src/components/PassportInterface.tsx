@@ -218,7 +218,7 @@ const PassportInterface = () => {
               </CardContent>
             </Card>
           );
-        })}
+        })
         )}
       </div>
 
